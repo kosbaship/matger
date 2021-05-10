@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:matger/screens/select_lang_screen/select_language_screen.dart';
 import 'package:matger/shared/app_colors.dart';
+import 'package:matger/shared/app_dependency_injection.dart';
 import 'package:matger/shared/app_strings.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await singletonsInitialization();
+
   runApp(MyApp());
 }
 

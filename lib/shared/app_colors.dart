@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 const kDefaultColor = Colors.indigo;
 const kDefaultBackgroundColor = Colors.white;
 
-const kActiveColor = Colors.green;
+const kActiveColor = kDefaultColor;
 final kSeparatorColor = Colors.grey[300];
 
 

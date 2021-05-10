@@ -21,12 +21,14 @@ class LanguageListItem extends StatelessWidget {
               Expanded(
                 child: Text(
                   languageName,
+                  style: kBlack20regular(),
                 ),
               ),
               if (isSelected)
                 Icon(
                   AppIcons.Arrow___Right_Circle,
                   color: kActiveColor,
+                  size: 40,
                 ),
             ],
           ),

@@ -4,17 +4,18 @@ import 'package:matger/models/language_model.dart';
 import 'package:matger/screens/select_lang_screen/select_language_cubit/select_language_cubit.dart';
 import 'package:matger/screens/select_lang_screen/select_language_cubit/select_language_states.dart';
 import 'package:matger/shared/app_colors.dart';
+import 'package:matger/shared/app_dependency_injection.dart';
 import 'package:matger/shared/app_enums.dart';
 import 'package:matger/shared/app_strings.dart';
 import 'package:matger/shared/app_text_styles.dart';
 import 'package:matger/shared/app_widgets.dart';
-import 'package:matger/shared/helper_methods.dart';
+import 'package:matger/shared/app_helper_methods.dart';
 
 class SelectLanguageScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
         body: BlocProvider(
-          create: (context) => LanguageCubit(),
+          create: (context) => di<LanguageCubit>(),
           child: BlocBuilder<LanguageCubit, LanguageStates>(
             builder: (context, state) => SafeArea(
               child: Column(
